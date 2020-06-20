@@ -5,102 +5,95 @@ import java.util.List;
 import pe.com.jdmm21.checklistdocumental.dto.common.MetadataDTO;
 
 public class RequestDTO {
-    private BranchDTO branchDTO;
-    private ChannelDTO channelDTO;
-    private CustomerDTO customerDTO;
-    private DocumentProcessDTO documentProcessDTO;
-    private ProductDTO productDTO;
-    private List<MetadataDTO> metadataDTO;
+    private BranchDTO branch;
+    private ChannelDTO channel;
+    private CustomerDTO customer;
+    private DocumentProcessDTO documentProcess;
+    private ProductDTO product;
+    private List<MetadataDTO> metadata;
 
     /**
-     * @return BranchDTO return the branchDTO
+     * @return BranchDTO return the branch
      */
-    public BranchDTO getBranchDTO() {
-        return branchDTO;
+    public BranchDTO getBranch() {
+        return branch;
     }
 
     /**
-     * @param branchDTO the branchDTO to set
+     * @param branch the branch to set
      */
-    public void setBranchDTO(BranchDTO branchDTO) {
-        this.branchDTO = branchDTO;
+    public void setBranch(BranchDTO branch) {
+        this.branch = branch;
     }
 
     /**
-     * @return ChannelDTO return the channelDTO
+     * @return ChannelDTO return the channel
      */
-    public ChannelDTO getChannelDTO() {
-        return channelDTO;
+    public ChannelDTO getChannel() {
+        return channel;
     }
 
     /**
-     * @param channelDTO the channelDTO to set
+     * @param channel the channel to set
      */
-    public void setChannelDTO(ChannelDTO channelDTO) {
-        this.channelDTO = channelDTO;
+    public void setChannel(ChannelDTO channel) {
+        this.channel = channel;
     }
 
     /**
-     * @return CustomerDTO return the customerDTO
+     * @return CustomerDTO return the customer
      */
-    public CustomerDTO getCustomerDTO() {
-        return customerDTO;
+    public CustomerDTO getCustomer() {
+        return customer;
     }
 
     /**
-     * @param customerDTO the customerDTO to set
+     * @param customer the customer to set
      */
-    public void setCustomerDTO(CustomerDTO customerDTO) {
-        this.customerDTO = customerDTO;
+    public void setCustomer(CustomerDTO customer) {
+        this.customer = customer;
     }
 
     /**
-     * @return DocumentProcessDTO return the documentProcessDTO
+     * @return DocumentProcessDTO return the documentProcess
      */
-    public DocumentProcessDTO getDocumentProcessDTO() {
-        return documentProcessDTO;
+    public DocumentProcessDTO getDocumentProcess() {
+        return documentProcess;
     }
 
     /**
-     * @param documentProcessDTO the documentProcessDTO to set
+     * @param documentProcess the documentProcess to set
      */
-    public void setDocumentProcessDTO(DocumentProcessDTO documentProcessDTO) {
-        this.documentProcessDTO = documentProcessDTO;
+    public void setDocumentProcess(DocumentProcessDTO documentProcess) {
+        this.documentProcess = documentProcess;
     }
 
     /**
-     * @return ProductDTO return the productDTO
+     * @return ProductDTO return the product
      */
-    public ProductDTO getProductDTO() {
-        return productDTO;
+    public ProductDTO getProduct() {
+        return product;
     }
 
     /**
-     * @param productDTO the productDTO to set
+     * @param product the product to set
      */
-    public void setProductDTO(ProductDTO productDTO) {
-        this.productDTO = productDTO;
+    public void setProduct(ProductDTO product) {
+        this.product = product;
     }
 
     /**
-     * @return List<MetadataDTO> return the metadataDTO
+     * @return List<MetadataDTO> return the metadata
      */
-    public List<MetadataDTO> getMetadataDTO() {
-        return metadataDTO;
+    public List<MetadataDTO> getMetadata() {
+        return metadata;
     }
 
     /**
-     * @param metadataDTO the metadataDTO to set
+     * @param metadata the metadata to set
      */
-    public void setMetadataDTO(List<MetadataDTO> metadataDTO) {
-        this.metadataDTO = metadataDTO;
-    }
-
-    @Override
-    public String toString() {
-        return "RequestDTO [branchDTO=" + branchDTO + ", channelDTO=" + channelDTO + ", customerDTO=" + customerDTO
-                + ", documentProcessDTO=" + documentProcessDTO + ", metadataDTO=" + metadataDTO + ", productDTO="
-                + productDTO + "]";
+    public void setMetadata(List<MetadataDTO> metadata) {
+        this.metadata = metadata;
     }
 
 }

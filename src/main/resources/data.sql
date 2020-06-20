@@ -14,4 +14,4 @@ AUDIT_DATE) VALUES ('rulepackagename',
 'ruleversion',
 'servicedname',
 '2020-03-01',
-'2020-03-09','process1','admin','2020-03-05','admin','2020-03-05');
+'2020-03-09','4.3.1.8_PE','admin','2020-03-05','admin','2020-03-05');
