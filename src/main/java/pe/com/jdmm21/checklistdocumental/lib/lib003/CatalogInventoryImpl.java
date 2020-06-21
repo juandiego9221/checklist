@@ -26,11 +26,17 @@ public class CatalogInventoryImpl implements CatalogInventory {
         LOGGER.info("[PCLD][PCLDR003Impl] - START");
         List<String> inputCodes = new ArrayList<>();
         inputCatalogo.forEach(listCatalog -> inputCodes.add(listCatalog.getId()));
-        Map<String, Object> mapInput = Collections.singletonMap(Mapper.DOCUMENT_TYPE_ID, inputCodes);
+        // Map<String, Object> mapInput =
+        // Collections.singletonMap(Mapper.DOCUMENT_TYPE_ID, inputCodes);
         List<Map<String, Object>> mapOut = new ArrayList<>();
+
+        String insql = String.join(",", Collections.nCopies(inputCodes.size(), "?"));
+        LOGGER.info("insql: " + insql);
+
         try {
             LOGGER.info("[PCLD][PCLDR003Impl] Getting data from T_PCLD_DOCUMENT_TYPE_CATALOG");
-            mapOut = jdbcTemplate.queryForList(Mapper.PCLD_GET_DATA_BY_ID_OPERATION, mapInput);
+            mapOut = jdbcTemplate.queryForList(String.format(Mapper.PCLD_GET_DATA_BY_ID_OPERATION, insql),
+                    inputCodes.toArray());
             LOGGER.info("[PCLD][PCLDR003Impl] - mapOut: " + mapOut.toString());
             return mapOut;
         } catch (RuntimeException e) {
