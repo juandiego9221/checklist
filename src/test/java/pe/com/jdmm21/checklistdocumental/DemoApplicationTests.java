@@ -1,31 +1,31 @@
 package pe.com.jdmm21.checklistdocumental;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 
+import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import pe.com.jdmm21.checklistdocumental.dto.request.RequestDTO;
-import pe.com.jdmm21.checklistdocumental.dto.response.DocumentTypeDTO;
-import pe.com.jdmm21.checklistdocumental.lib.lib001.ChecklistInventory;
+import pe.com.jdmm21.checklistdocumental.dto.request.DocumentProcessDTO;
+import pe.com.jdmm21.checklistdocumental.lib.lib002.VersionInventory;
 
 @SpringBootTest
 class DemoApplicationTests {
+
 	@Autowired
-	ChecklistInventory checklistInventory;
+	private VersionInventory versionInventory;
 
 	@Test
 	void inputDataIsHasInvalidBooleanData() {
-		// RequestDTO requestDTO = new RequestDTO();
-		// List<DocumentTypeDTO> result =
-		// checklistInventory.executeGetDocuments(requestDTO);
-		// assertEquals("0001", result.get(0).getId());
-		assertTrue(true);
+		DocumentProcessDTO documentProcessDTO = new DocumentProcessDTO();
+		DateTime dateTime = new DateTime("2020-03-02");
+		documentProcessDTO.setEffectiveDate(dateTime.toDate());
+		documentProcessDTO.setId("4.3.1.8_PE");
+		Map<String, String> result = versionInventory.executeGetVersionInformation(documentProcessDTO);
+		assertTrue(result.get("RULE_NAME").equalsIgnoreCase("rulename"));
 	}
 
 }

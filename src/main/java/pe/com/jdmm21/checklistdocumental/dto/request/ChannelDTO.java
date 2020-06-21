@@ -1,7 +1,9 @@
 package pe.com.jdmm21.checklistdocumental.dto.request;
 
-public class ChannelDTO {
-    private String id;
+import pe.com.jdmm21.checklistdocumental.dto.common.CommonDTO;
+
+public class ChannelDTO implements CommonDTO {
+	private String id;
 
 	public String getId() {
 		return id;

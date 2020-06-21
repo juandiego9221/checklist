@@ -1,7 +1,9 @@
 package pe.com.jdmm21.checklistdocumental.dto.request;
 
-public class ProductDTO {
-    private String id;
+import pe.com.jdmm21.checklistdocumental.dto.common.CommonDTO;
+
+public class ProductDTO implements CommonDTO {
+	private String id;
 	private SubproductDTO subproduct;
 
 	public String getId() {

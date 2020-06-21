@@ -9,8 +9,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import pe.com.jdmm21.checklistdocumental.dto.common.CommonDTO;
+
 @JsonPropertyOrder({ "id" })
-public class Channel {
+public class Channel implements CommonDTO {
     @JsonProperty("id")
     private String id;
     @JsonIgnore

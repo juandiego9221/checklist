@@ -95,7 +95,7 @@ public class Utils {
                 return Mapper.TYPE_ARRAY_OF_NUMBER;
             }
         } catch (NumberFormatException e) {
-            value = value.replaceAll(Mapper.QUOTATION, Mapper.EMPTY_STRING);
+            value = value.replace(Mapper.QUOTATION, Mapper.EMPTY_STRING);
             if (datePattern.matcher(value).matches()) {
                 return Mapper.TYPE_ARRAY_OF_DATE;
             }

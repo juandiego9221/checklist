@@ -9,9 +9,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import pe.com.jdmm21.checklistdocumental.dto.common.CommonDTO;
+
 @JsonPropertyOrder({ "id" })
-public class Product {
-    @JsonProperty("id")
+public class Product implements CommonDTO {
+	@JsonProperty("id")
 	private String id;
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<>();

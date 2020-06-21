@@ -2,8 +2,10 @@ package pe.com.jdmm21.checklistdocumental.dto.request;
 
 import java.util.Date;
 
-public class DocumentProcessDTO {
-    private String id;
+import pe.com.jdmm21.checklistdocumental.dto.common.CommonDTO;
+
+public class DocumentProcessDTO implements CommonDTO {
+	private String id;
 	private String number;
 	private Date effectiveDate;
 
