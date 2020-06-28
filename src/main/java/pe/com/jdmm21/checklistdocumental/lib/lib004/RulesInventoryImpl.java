@@ -45,7 +45,7 @@ public class RulesInventoryImpl implements RulesInventory {
             LOGGER.info("[PCLD][PCLDR005Impl] JSON to send {}", request.toString());
             // rulesResponseString = "";
             RestTemplate restTemplate = new RestTemplate();
-            rulesResponseString = restTemplate.postForObject("http://localhost:8090/test3", request, String.class,
+            rulesResponseString = restTemplate.postForObject("http://localhost:8080/demo3/test3", request, String.class,
                     queryParams);
             JSONObject jsonStringToObject = new JSONObject(rulesResponseString);
             if (jsonStringToObject.get(Mapper.DOCUMENT_TYPES_OBJECT).toString().equals(Mapper.EMPTY_RULES_RESPONSE)) {
